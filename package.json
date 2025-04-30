@@ -1,0 +1,27 @@
+{
+  "name": "tabler-a11y",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Accessibility toolkit for Tabler UI",
+  "main": "dist/tabler-a11y.min.js",
+  "scripts": {
+    "build": "rollup --bundleConfigAsCjs -c rollup.config.cjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^3.29.5",
+    "rollup-plugin-copy": "^3.5.0"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "tabler"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
+}

@@ -1,0 +1,125 @@
+/* Estilos principais do pacote */
+.a11y-toolbar {
+  position: fixed;
+  z-index: 9999;
+}
+
+/* High Contrast */
+.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast * {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* Menu */
+.a11y-menu {
+  padding: 8px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 200px;
+  display: none;
+}
+
+.a11y-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.a11y-menu-item:hover {
+  background: #f8f9fa;
+}
+
+/* Posicionamentos */
+/* Posicionamento do botão */
+.a11y-container .btn-floating.bottom-right {
+  right: 1rem !important;
+  bottom: 1rem !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.a11y-container .btn-floating.bottom-left {
+  left: 1rem !important;
+  bottom: 1rem !important;
+  top: auto !important;
+  right: auto !important;
+}
+
+.a11y-container .btn-floating.top-right {
+  right: 1rem !important;
+  top: 1rem !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+.a11y-container .btn-floating.top-left {
+  left: 1rem !important;
+  top: 1rem !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+/* Posicionamento do menu */
+.a11y-container .a11y-menu.bottom-right {
+  right: 1rem !important;
+  bottom: calc(1rem + 2.25rem + .5rem) !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.a11y-container .a11y-menu.bottom-left {
+  left: 1rem !important;
+  bottom: calc(1rem + 2.25rem + .5rem) !important;
+  top: auto !important;
+  right: auto !important;
+}
+
+.a11y-container .a11y-menu.top-right {
+  right: 1rem !important;
+  top: calc(1rem + 2.25rem + .5rem) !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+.a11y-container .a11y-menu.top-left {
+  left: 1rem !important;
+  top: calc(1rem + 2.25rem + .5rem) !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+/* adiciona 56px embaixo do primeiro header */
+body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md)
+  header.navbar.navbar-expand-md.d-print-none {
+  margin-bottom: 56px !important;
+}
+
+/* adiciona 56px em cima do segundo header */
+body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md)
+  header.navbar-expand-md {
+  margin-top: 56px !important;
+}
+
+/* Badges */
+.a11y-badge {
+  background: #e2e8f0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin-left: 8px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Acessibilidade</title>
+  <link href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet">
+  <link href="/dist/tabler-a11y.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="test-area">
+    <h1>Texto de Exemplo</h1>
+    <p>Este é um parágrafo de teste com diversos elementos:</p>
+    <ul>
+      <li>Item de lista 1</li>
+      <li>Item de lista 2</li>
+    </ul>
+    <img src="https://picsum.photos/300/200" alt="Imagem de teste" style="display: block; margin-bottom: 1rem;">
+    <button class="btn btn-primary">Botão de teste</button>
+  </div>
+
+  <script src="/dist/tabler-a11y.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      new TablerA11y({
+        position: 'bottom-right' // Opções: bottom-right, bottom-left, top-right, top-left
+      });
+    });
+  </script>
+</body>
+</html>
