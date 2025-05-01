@@ -90,7 +90,6 @@ export function initToolbar(instance, options) {
     const isOpen = menu.style.display === 'block';
     toggleButton.innerHTML = isOpen ? menuIcon : closeIcon;
     menu.style.display = isOpen ? 'none' : 'block';
-    adjustMenuPosition();
   });
 
   document.addEventListener('click', (e) => {
@@ -99,17 +98,6 @@ export function initToolbar(instance, options) {
       menu.style.display = 'none';
     }
   });
-
-  function adjustMenuPosition() {
-    const rect = toggleButton.getBoundingClientRect();
-    
-    if (config.position.startsWith('bottom')) {
-      menu.style.top = `${rect.top - menuRect.height - 10}px`;
-      menu.style.bottom = 'auto';
-    } else {
-      menu.style.top = `${rect.bottom + 10}px`;
-    }
-  }
 
   container.appendChild(toggleButton);
   container.appendChild(menu);
