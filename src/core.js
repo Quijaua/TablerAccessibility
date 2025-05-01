@@ -53,6 +53,7 @@ class TablerA11y {
         }
       });
     }
+    this.applyAll();
   }
 
   saveSettings() {
@@ -66,13 +67,22 @@ class TablerA11y {
   }
 
   toggleSetting(setting) {
-    if (setting === 'textSize') {
+    if (setting === 'textSizeLevel') {
       this.settings.textSizeLevel = (this.settings.textSizeLevel + 1) % 5;
+      this.updateTextSizeBadge();
     } else {
       this.settings[setting] = !this.settings[setting];
     }
+    
     this.saveSettings();
     this.applyAll();
+  }
+
+  updateTextSizeBadge() {
+    const badges = document.querySelectorAll('.a11y-menu-item .level');
+    badges.forEach(badge => {
+      badge.textContent = this.settings.textSizeLevel;
+    });
   }
 }
 
