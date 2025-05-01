@@ -62,7 +62,9 @@ class TablerA11y {
 
   applyAll() {
     Object.entries(this.settings).forEach(([key, value]) => {
-      this.applyFunctions[key](value);
+      if(key !== 'reset') {
+        this.applyFunctions[key](value);
+      }
     });
   }
 
@@ -82,6 +84,36 @@ class TablerA11y {
     const badges = document.querySelectorAll('.a11y-menu-item .level');
     badges.forEach(badge => {
       badge.textContent = this.settings.textSizeLevel;
+    });
+  }
+
+  resetSettings() {
+    // Valores padrão
+    this.settings = {
+      textSizeLevel: 0,
+      dyslexiaFont: false,
+      grayscale: false,
+      highContrast: false,
+      hideImages: false
+    };
+    
+    // Limpa o localStorage
+    localStorage.removeItem('tabler-a11y-settings');
+    
+    // Reaplica os padrões
+    this.applyAll();
+    
+    // Atualiza a UI
+    this.updateTextSizeBadge();
+    this.updateActiveStates();
+  }
+
+  updateActiveStates() {
+    document.querySelectorAll('.a11y-menu-item').forEach(button => {
+      const setting = button.dataset.setting;
+      if(setting && setting !== 'textSizeLevel' && setting !== 'reset') {
+        button.classList.toggle('active', this.settings[setting]);
+      }
     });
   }
 }

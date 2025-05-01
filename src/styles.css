@@ -56,6 +56,26 @@
   margin-bottom: 8px;
 }
 
+/* Botão de reset */
+.a11y-menu-item[data-setting="reset"] {
+  grid-column: 1 / -1; /* Ocupa toda a largura */
+  background: #fff5f5;
+  border-color: #fed7d7;
+}
+
+.a11y-menu-item[data-setting="reset"]:hover {
+  background: #fee2e2;
+}
+
+.a11y-menu-item[data-setting="reset"] .a11y-label {
+  color: #dc2626;
+}
+
+/* Ícone de reset */
+.a11y-menu-item[data-setting="reset"] svg {
+  stroke: #dc2626;
+}
+
 /* Texto */
 .a11y-label {
   font-size: 0.875rem;
