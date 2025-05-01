@@ -104,15 +104,15 @@
 }
 
 /* adiciona 56px embaixo do primeiro header */
-body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md)
-  header.navbar.navbar-expand-md.d-print-none {
-  margin-bottom: 56px !important;
+body:has(header.navbar.navbar-expand-md.d-print-none)
+  div.a11y-container button.btn-floating {
+    top: calc(1rem + 2.25rem + .5rem + 56px * 2) !important;
 }
 
 /* adiciona 56px em cima do segundo header */
 body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md)
-  header.navbar-expand-md {
-  margin-top: 56px !important;
+  div.a11y-container button.btn-floating {
+    top: calc(1rem + 2.25rem + .5rem + 56px) !important;
 }
 
 /* Badges */

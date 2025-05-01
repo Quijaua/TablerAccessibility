@@ -31,12 +31,6 @@ export function initToolbar(instance, options) {
   toggleButton.className = `btn btn-floating btn-icon btn-primary ${position}`;
   toggleButton.innerHTML = menuIcon;
 
-  toggleButton.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isOpen = menu.style.display === 'block';
-    toggleButton.innerHTML = isOpen ? menuIcon : closeIcon;
-  });
-
   // Configuração do menu
   menu.className = `a11y-menu ${position}`;
   menu.style.cssText = `
@@ -91,16 +85,17 @@ export function initToolbar(instance, options) {
     menu.appendChild(button);
   });
 
-  // Controle de abertura/fechamento
   toggleButton.addEventListener('click', (e) => {
     e.stopPropagation();
     const isOpen = menu.style.display === 'block';
+    toggleButton.innerHTML = isOpen ? menuIcon : closeIcon;
     menu.style.display = isOpen ? 'none' : 'block';
     adjustMenuPosition();
   });
 
   document.addEventListener('click', (e) => {
     if (!container.contains(e.target)) {
+      toggleButton.innerHTML = menuIcon;
       menu.style.display = 'none';
     }
   });
