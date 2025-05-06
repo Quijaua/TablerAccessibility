@@ -29,6 +29,7 @@ module.exports = {
     }),
     copy({
       targets: [
+        { src: 'fonts/**/*', dest: 'dist/fonts' },
         { src: 'src/styles.css', dest: 'dist', rename: 'tabler-a11y.min.css' }
       ]
     })
