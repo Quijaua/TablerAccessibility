@@ -166,12 +166,38 @@
 
 /* adiciona 56px embaixo do primeiro header */
 body:has(header.navbar.navbar-expand-md.d-print-none)
-  div.a11y-container button.btn-floating {
-    top: calc(1rem + 2.25rem + .5rem + 56px * 2) !important;
+  div.a11y-container button.btn-floating.top-left {
+    top: calc(1rem + 56px) !important;
+}
+body:has(header.navbar.navbar-expand-md.d-print-none)
+  div.a11y-container button.btn-floating.top-right {
+    top: calc(1rem + 56px) !important;
 }
 
-/* adiciona 56px em cima do segundo header */
-body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md)
-  div.a11y-container button.btn-floating {
+body:has(header.navbar.navbar-expand-md.d-print-none)
+  div.a11y-container .a11y-menu.top-left {
     top: calc(1rem + 2.25rem + .5rem + 56px) !important;
+}
+body:has(header.navbar.navbar-expand-md.d-print-none)
+  div.a11y-container .a11y-menu.top-right {
+    top: calc(1rem + 2.25rem + .5rem + 56px) !important;
+}
+
+/* adiciona mais 56px em cima do segundo header */
+body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md div.collapse.navbar-collapse)
+  div.a11y-container button.btn-floating.top-right {
+    top: calc(1rem + 56px * 2) !important;
+}
+body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md div.collapse.navbar-collapse)
+  div.a11y-container button.btn-floating.top-left {
+    top: calc(1rem + 56px * 2) !important;
+}
+
+body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md div.collapse.navbar-collapse)
+  div.a11y-container .a11y-menu.top-left {
+    top: calc(1rem + 2.25rem + .5rem + 56px * 2) !important;
+}
+body:has(header.navbar.navbar-expand-md.d-print-none):has(header.navbar-expand-md div.collapse.navbar-collapse)
+  div.a11y-container .a11y-menu.top-right {
+    top: calc(1rem + 2.25rem + .5rem + 56px * 2) !important;
 }
