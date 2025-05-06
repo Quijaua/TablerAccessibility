@@ -16,6 +16,22 @@
   filter: contrast(200%) !important;
 }
 
+/* Accessibility Btn */
+.btn-accessibility {
+  --tblr-btn-border-color: transparent;
+  --tblr-btn-hover-border-color: transparent;
+  --tblr-btn-active-border-color: transparent;
+  --tblr-btn-color: #f9fafb;
+  --tblr-btn-bg: #066fd1;
+  --tblr-btn-hover-color: #f9fafb;
+  --tblr-btn-hover-bg: color-mix(in oklab, #066fd1, transparent 20%);
+  --tblr-btn-active-color: #f9fafb;
+  --tblr-btn-active-bg: color-mix(in oklab, #066fd1, transparent 20%);
+  --tblr-btn-disabled-bg: #066fd1;
+  --tblr-btn-disabled-color: #f9fafb;
+  --tblr-btn-box-shadow: 0 1px 1px rgba(31, 41, 55, .06);
+}
+
 /* Menu */
 /* Layout do menu */
 .a11y-menu {

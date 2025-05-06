@@ -28,7 +28,7 @@ export function initToolbar(instance, options) {
       <path d="M6 6l12 12" />
     </svg>`;
 
-  toggleButton.className = `btn btn-floating btn-icon btn-primary ${position}`;
+  toggleButton.className = `btn btn-floating btn-icon btn-accessibility ${position}`;
   toggleButton.innerHTML = menuIcon;
 
   // Configuração do menu
